@@ -5,7 +5,7 @@ We use [Unity 2022.3.62f1](https://unity.com/releases/editor/whats-new/2022.3.62
 
 ## We use Assets:
 > [Turret 0](https://assetstore.unity.com/packages/3d/props/weapons/fatty-poly-turret-free-155251?srsltid=AfmBOorN_kPHp8g3GPHmib5c34bJCWCrenQnLUhfisZI1fxf4TxD63eV) by [Fatty War](https://assetstore.unity.com/publishers/20541) from [AssetStore](https://assetstore.unity.com/)
-![98e2c0a7-7954-497c-baa6-033158d82d5e](https://github.com/user-attachments/assets/05ce3ddf-3a30-42bf-b084-007731312710)
+![85f8d506-653e-4fc1-9f5c-15888d072b88](https://github.com/user-attachments/assets/53e57e7e-7cfe-4354-9d66-be28aa5b2e12)
 
 > [Turret 1](https://assetstore.unity.com/packages/3d/props/weapons/fatty-poly-turret-part-2-free-159989) by [Fatty War](https://assetstore.unity.com/publishers/20541) from [AssetStore](https://assetstore.unity.com/)
 ![98e2c0a7-7954-497c-baa6-033158d82d5e](https://github.com/user-attachments/assets/05ce3ddf-3a30-42bf-b084-007731312710)
