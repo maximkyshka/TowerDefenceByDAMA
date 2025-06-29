@@ -4,7 +4,10 @@
 We use [Unity 2022.3.62f1](https://unity.com/releases/editor/whats-new/2022.3.62)
 
 ## We use Assets:
-> [Turret](https://assetstore.unity.com/packages/3d/props/weapons/fatty-poly-turret-part-2-free-159989) by [Fatty War](https://assetstore.unity.com/publishers/20541) from [AssetStore](https://assetstore.unity.com/)
+> [Turret 0](https://assetstore.unity.com/packages/3d/props/weapons/fatty-poly-turret-free-155251?srsltid=AfmBOorN_kPHp8g3GPHmib5c34bJCWCrenQnLUhfisZI1fxf4TxD63eV) by [Fatty War](https://assetstore.unity.com/publishers/20541) from [AssetStore](https://assetstore.unity.com/)
+![98e2c0a7-7954-497c-baa6-033158d82d5e](https://github.com/user-attachments/assets/05ce3ddf-3a30-42bf-b084-007731312710)
+
+> [Turret 1](https://assetstore.unity.com/packages/3d/props/weapons/fatty-poly-turret-part-2-free-159989) by [Fatty War](https://assetstore.unity.com/publishers/20541) from [AssetStore](https://assetstore.unity.com/)
 ![98e2c0a7-7954-497c-baa6-033158d82d5e](https://github.com/user-attachments/assets/05ce3ddf-3a30-42bf-b084-007731312710)
 
 >[Zombie 0](https://assetstore.unity.com/packages/3d/characters/humanoids/3d-characters-zombie-city-streets-lowpoly-pack-lite-277409) by [CatBorg Studio](https://assetstore.unity.com/publishers/73022) from [AssetStore](https://assetstore.unity.com/)
