@@ -283,7 +283,7 @@ MonoBehaviour:
   barrel: {fileID: 4459613001278838}
   target: {fileID: 0}
   yRotate: 196
-  xRotate: 0
+  xRotate: 35.3
   useXRotate: 1
   RotateSpeed: 1.18
 --- !u!114 &1723027194211181841

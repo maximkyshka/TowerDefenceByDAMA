@@ -1,8 +1,11 @@
 using UnityEngine;
+using TypeTower;
 
 [ExecuteAlways]
 public class TurretCon : MonoBehaviour
 {
+    [SerializeField] private Tower tower;
+    
     [SerializeField] private Transform turret;  
     [SerializeField] private Transform barrel;
     

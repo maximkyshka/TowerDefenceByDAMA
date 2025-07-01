@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HelseCon : MonoBehaviour
+public class HelseConZombie : MonoBehaviour
 {
     [SerializeField, Range(0, 100)] private int Helse;
     

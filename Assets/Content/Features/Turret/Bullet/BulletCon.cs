@@ -40,7 +40,7 @@ public class BulletCon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zombie"))
         {
-            other.gameObject.GetComponent<HelseCon>().TakeDamage(damage);
+            other.gameObject.GetComponent<HelseConZombie>().TakeDamage(damage);
             Destroy(gameObject);
         }
     }
