@@ -3,21 +3,45 @@ using UnityEngine;
 public class BulletCon : MonoBehaviour
 {
     [SerializeField] private Transform target;
-    
-    Rigidbody rb;
-    
-    [SerializeField, Range(0, 100)] private float Speed;
-    [SerializeField] private float RotateSpeed;
-    public void Spawn(Transform Target)
+
+    private Rigidbody rb;
+    [SerializeField, Range(0.0f, 100.0f)] private float timeLive = 5f;
+    [SerializeField, Range(0, 100)] private int damage;
+    [SerializeField, Range(0.0f, 100.0f)] private float speed;
+    [SerializeField, Range(0.0f, 100.0f)] private float rotateSpeed;
+    private Quaternion targetRotation;
+
+    private void Awake()
     {
-        target = Target;
         rb = GetComponent<Rigidbody>();
     }
-    
-    void Update()
+
+    public void Spawn(Transform newTarget)
     {
-        rb.velocity = transform.forward * Speed;
-        Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, targetRotation, Time.deltaTime * RotateSpeed);
+        target = newTarget;
+        Destroy(gameObject, timeLive);
+        var direction = target.position - transform.position;  
+        targetRotation = Quaternion.LookRotation(direction);
+    }
+    
+    private void FixedUpdate()
+    {
+        rb.velocity = transform.forward * speed;
+        
+        if (target == null)
+        {
+            return;
+        }
+        rb.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, 
+            Time.fixedDeltaTime * rotateSpeed));
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Zombie"))
+        {
+            other.gameObject.GetComponent<HelseCon>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
 }

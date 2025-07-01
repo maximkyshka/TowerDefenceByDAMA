@@ -315,7 +315,7 @@ MonoBehaviour:
   particle: {fileID: 198352920909028448}
   target: {fileID: 0}
   SpawnPoint: {fileID: 4411725851834284}
-  ReloadTime: 1.19
+  ReloadTime: 3
   IsReload: 1
   Bullet: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
 --- !u!1 &1658705116820196
