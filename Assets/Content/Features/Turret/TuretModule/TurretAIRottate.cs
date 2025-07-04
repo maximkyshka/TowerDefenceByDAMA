@@ -7,8 +7,8 @@ public class TurretAIRottate : MonoBehaviour
     
     Transform[] target;
     
-    [Range(0, 100f)] public float MaxDistance;
-    [Range(0, 100f)] public float MinDistance;
+    [Range(0, 100)] public int MaxDistance;
+    [Range(0, 100)] public int MinDistance;
 
     private void Awake()
     {

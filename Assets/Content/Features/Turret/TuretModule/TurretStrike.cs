@@ -4,11 +4,11 @@ public class TurretStrike : MonoBehaviour
 {
     private TurretCon _turretCon;
     
-    [SerializeField] private ParticleSystem particle;
+    [SerializeField] private ParticleSystem[] particle;
     
     [SerializeField] private Transform target;
     
-    [SerializeField] private Transform SpawnPoint;
+    [SerializeField] private Transform[] SpawnPoint;
     
     [SerializeField] private float ReloadTime;
     
@@ -36,9 +36,17 @@ public class TurretStrike : MonoBehaviour
     {
         if (IsReload)
         {
-            GameObject temp = Instantiate(Bullet, SpawnPoint.position, SpawnPoint.rotation);
-            temp.GetComponent<BulletCon>().Spawn(target);
-            particle.Play();
+            foreach (var point in SpawnPoint)
+            {
+                GameObject temp = Instantiate(Bullet, point.position, point.rotation);
+                temp.GetComponent<BulletCon>().Spawn(target);
+            }
+
+            foreach (var p in particle)
+            {
+                p.Play();
+            }
+            
             IsReload = false;
             Invoke("Reload", ReloadTime);
         }

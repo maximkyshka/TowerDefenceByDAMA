@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tower: 0
   turret: {fileID: 4940591295711036}
   barrel: {fileID: 4459613001278838}
   target: {fileID: 0}
@@ -298,8 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 64.3
-  MinDistance: 7.8
+  MaxDistance: 50
+  MinDistance: 11
 --- !u!114 &5558630756873163797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,10 +313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6340de93b0c468e48aca6125e87869a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 198352920909028448}
+  particle:
+  - {fileID: 0}
   target: {fileID: 0}
-  SpawnPoint: {fileID: 4411725851834284}
-  ReloadTime: 3
+  SpawnPoint:
+  - {fileID: 0}
+  ReloadTime: 10
   IsReload: 1
   Bullet: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
 --- !u!1 &1658705116820196
@@ -344,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658705116820196}
   serializedVersion: 2
-  m_LocalRotation: {x: -7.259432e-11, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.30317682, y: 0, z: 0, w: 0.9529343}
   m_LocalPosition: {x: -0, y: 1.1, z: -0.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

@@ -5290,6 +5290,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4580980637778110}
+  - component: {fileID: 5798703227142767746}
+  - component: {fileID: 7241457634613155113}
+  - component: {fileID: -6239059712830578500}
   m_Layer: 0
   m_Name: FattyMissileG03
   m_TagString: Untagged
@@ -5314,6 +5317,60 @@ Transform:
   - {fileID: 4712832672078886}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5798703227142767746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370505811353800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxDistance: 100
+  MinDistance: 5
+--- !u!114 &7241457634613155113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370505811353800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: 1
+  turret: {fileID: 0}
+  barrel: {fileID: 0}
+  target: {fileID: 0}
+  yRotate: 0
+  xRotate: 0
+  useXRotate: 0
+  RotateSpeed: 0
+--- !u!114 &-6239059712830578500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370505811353800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6340de93b0c468e48aca6125e87869a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle:
+  - {fileID: 0}
+  target: {fileID: 0}
+  SpawnPoint:
+  - {fileID: 0}
+  ReloadTime: 10
+  IsReload: 0
+  Bullet: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
 --- !u!1 &1399252442041522
 GameObject:
   m_ObjectHideFlags: 0
