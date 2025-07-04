@@ -5120,7 +5120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543343654471068}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.97437006, z: -0, w: -0.224951}
+  m_LocalRotation: {x: -0, y: 0.00008249338, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5138,8 +5138,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4595654756050798}
-  - component: {fileID: 2790820721428323414}
   - component: {fileID: 7208248946235355527}
+  - component: {fileID: 2790820721428323414}
   - component: {fileID: 638449346716036805}
   m_Layer: 0
   m_Name: FattyCannonG02
@@ -5165,20 +5165,6 @@ Transform:
   - {fileID: 4779222424309044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2790820721428323414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875090778556656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxDistance: 100
-  MinDistance: 10
 --- !u!114 &7208248946235355527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5191,14 +5177,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: 0
-  turret: {fileID: 4722236510932744}
-  barrel: {fileID: 4597034265451690}
-  target: {fileID: 0}
-  yRotate: 206
-  xRotate: 0
-  useXRotate: 1
-  RotateSpeed: 0.7
+  _tower: 0
+  _turret: {fileID: 4722236510932744}
+  _barrel: {fileID: 4597034265451690}
+  _yaw: 0
+  _pitch: 0
+  _usePitch: 1
+  _rotationSpeed: 1
+--- !u!114 &2790820721428323414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875090778556656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDistance: 100
+  _minDistance: 15
 --- !u!114 &638449346716036805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5211,12 +5210,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6340de93b0c468e48aca6125e87869a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 198190432169522098}
-  target: {fileID: 0}
-  SpawnPoint: {fileID: 4905286732937208}
-  ReloadTime: 15
-  IsReload: 1
-  Bullet: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
+  _projectileSpawnPoints:
+  - {fileID: 4905286732937208}
+  _reloadDuration: 15
+  _firingParticles:
+  - {fileID: 198190432169522098}
+  _projectilePrefab: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
 --- !u!1 &1931211189434318
 GameObject:
   m_ObjectHideFlags: 0

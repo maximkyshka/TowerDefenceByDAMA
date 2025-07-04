@@ -139,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393367149455902}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9902681, z: -0, w: -0.13917309}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -279,14 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: 0
-  turret: {fileID: 4940591295711036}
-  barrel: {fileID: 4459613001278838}
-  target: {fileID: 0}
-  yRotate: 196
-  xRotate: 35.3
-  useXRotate: 1
-  RotateSpeed: 1.18
+  _tower: 3
+  _turret: {fileID: 4940591295711036}
+  _barrel: {fileID: 4459613001278838}
+  _yaw: 0
+  _pitch: 80
+  _usePitch: 1
+  _rotationSpeed: 5
 --- !u!114 &1723027194211181841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxDistance: 50
-  MinDistance: 11
+  _maxDistance: 50
+  _minDistance: 5
 --- !u!114 &5558630756873163797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,14 +312,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6340de93b0c468e48aca6125e87869a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle:
-  - {fileID: 0}
-  target: {fileID: 0}
-  SpawnPoint:
-  - {fileID: 0}
-  ReloadTime: 10
-  IsReload: 1
-  Bullet: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
+  _projectileSpawnPoints:
+  - {fileID: 4017785409900504}
+  _reloadDuration: 7.5
+  _firingParticles:
+  - {fileID: 198352920909028448}
+  _projectilePrefab: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
 --- !u!1 &1658705116820196
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658705116820196}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.30317682, y: 0, z: 0, w: 0.9529343}
+  m_LocalRotation: {x: -0.64278764, y: 0, z: 0, w: 0.7660445}
   m_LocalPosition: {x: -0, y: 1.1, z: -0.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

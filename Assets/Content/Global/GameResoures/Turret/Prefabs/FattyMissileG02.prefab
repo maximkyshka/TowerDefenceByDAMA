@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025420132486370}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.94832367, z: -0, w: -0.31730467}
+  m_LocalRotation: {x: -0, y: -0.28401536, z: 0, w: -0.95881975}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4972,8 +4972,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4081698564255386}
-  - component: {fileID: 6192531117613980825}
   - component: {fileID: 3259267399831456871}
+  - component: {fileID: 6192531117613980825}
   - component: {fileID: 3441454098389797924}
   m_Layer: 0
   m_Name: FattyMissileG02
@@ -4999,20 +4999,6 @@ Transform:
   - {fileID: 4740727780306184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6192531117613980825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498501323785604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxDistance: 100
-  MinDistance: 5
 --- !u!114 &3259267399831456871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5025,14 +5011,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tower: 1
-  turret: {fileID: 4528818141007908}
-  barrel: {fileID: 4379325548283734}
-  target: {fileID: 0}
-  yRotate: 217
-  xRotate: 0
-  useXRotate: 1
-  RotateSpeed: 5
+  _tower: 1
+  _turret: {fileID: 4528818141007908}
+  _barrel: {fileID: 4379325548283734}
+  _yaw: 33
+  _pitch: 41.8
+  _usePitch: 1
+  _rotationSpeed: 10
+--- !u!114 &6192531117613980825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498501323785604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxDistance: 75
+  _minDistance: 10
 --- !u!114 &3441454098389797924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,14 +5044,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6340de93b0c468e48aca6125e87869a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle:
-  - {fileID: 198501811765108242}
-  target: {fileID: 0}
-  SpawnPoint:
+  _projectileSpawnPoints:
   - {fileID: 4225567618342552}
-  ReloadTime: 5
-  IsReload: 0
-  Bullet: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
+  _reloadDuration: 10
+  _firingParticles:
+  - {fileID: 198501811765108242}
+  _projectilePrefab: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
 --- !u!1 &1637871164663996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,7 +5324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806140305902846}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.35673803, y: 0, z: 0, w: 0.9342045}
   m_LocalPosition: {x: 0, y: 1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
