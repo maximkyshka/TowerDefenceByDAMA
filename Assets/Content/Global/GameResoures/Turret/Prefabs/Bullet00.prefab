@@ -47,11 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd265639936abf64ca0acd9b49e6e489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  timeLive: 5.6
-  damage: 18
-  speed: 47.5
-  rotateSpeed: 49.7
+  _target: {fileID: 0}
+  _lifeTime: 23
+  _damage: 25
+  _speed: 27.7
+  _rotationSpeed: 16
 --- !u!54 &4721545331197306241
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -130,11 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd265639936abf64ca0acd9b49e6e489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  timeLive: 5.6
-  damage: 25
-  speed: 70
-  rotateSpeed: 30
+  _target: {fileID: 0}
+  _lifeTime: 11
+  _damage: 40
+  _speed: 67
+  _rotationSpeed: 55
 --- !u!54 &-610818080768391304
 Rigidbody:
   m_ObjectHideFlags: 0
