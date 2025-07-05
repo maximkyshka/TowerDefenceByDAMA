@@ -376,7 +376,7 @@ Transform:
   m_GameObject: {fileID: 2545853865617807517}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0644764, y: 0, z: -0, w: 0.99791926}
-  m_LocalPosition: {x: -0, y: 0.0015221953, z: -1.4901161e-10}
+  m_LocalPosition: {x: -0, y: -0.00036, z: 0.00049}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1363,8 +1363,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6660184903045082040}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 885eac34fd0d577439e6670a7ca3777e, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: dbe75d53efb63144cae0720374ccd72f, type: 3}
+  m_Controller: {fileID: 9100000, guid: c0191f6c75700034090477b9ef1e1fb5, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1387,9 +1387,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b233b4c37524a24e9489ed8e285d9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Helse: 100
-  Doctor: 0
-  TimeRegen: 0
+  _health: 100
+  _canRegenerate: 0
+  _regenerationInterval: 0
 --- !u!54 &8599022515985551663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1412,7 +1412,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1436,8 +1436,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 0.5157216, y: 2, z: 0.55386055}
+  m_Center: {x: -0.027806312, y: 1, z: 0.012300432}
 --- !u!1 &6906493944559020957
 GameObject:
   m_ObjectHideFlags: 0

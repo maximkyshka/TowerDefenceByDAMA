@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158182551212418}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2571328, y: 0, z: 0, w: 0.96637607}
+  m_LocalRotation: {x: -0.43051013, y: 0, z: 0, w: 0.9025858}
   m_LocalPosition: {x: 0, y: 1.429796, z: -0.048067585}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5332,8 +5332,8 @@ MonoBehaviour:
   _tower: 2
   _turret: {fileID: 4033343639771536}
   _barrel: {fileID: 4343475464199076}
-  _yaw: 140
-  _pitch: 29.8
+  _yaw: 0
+  _pitch: 51
   _usePitch: 1
   _rotationSpeed: 2.5
 --- !u!114 &5798703227142767746
@@ -5394,7 +5394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399252442041522}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9396926, z: -0, w: 0.34202015}
+  m_LocalRotation: {x: -0, y: 0.00000001643226, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
