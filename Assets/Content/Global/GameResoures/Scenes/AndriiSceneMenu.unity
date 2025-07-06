@@ -1134,7 +1134,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1516231151976678, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_Name
-      value: QuitButton
+      value: GlobalSettingButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 224185286312818706, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 201.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 224185286312818706, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100.59
       objectReference: {fileID: 0}
     - target: {fileID: 224216709915605404, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_Pivot.x
@@ -1162,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224216709915605404, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 184.48
+      value: 195.362
       objectReference: {fileID: 0}
     - target: {fileID: 224216709915605404, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1210,7 +1218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224216709915605404, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960.02
+      value: 971.87524
       objectReference: {fileID: 0}
     - target: {fileID: 224216709915605404, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1229,8 +1237,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224919586824708224, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 201.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 224919586824708224, guid: 693e43330460346d1a79c4874c16cbd2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.7799988
+      value: 0.087629
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1735,7 +1747,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.7, y: -5.37}
+  m_AnchoredPosition: {x: 15.4, y: -5.37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011290759
@@ -1758,7 +1770,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Im rich Man
+  m_text: Global Setting
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
