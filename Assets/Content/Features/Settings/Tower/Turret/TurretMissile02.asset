@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e07ef448fea444c90abd5ff0a75be8, type: 3}
+  m_Name: TurretMissile02
+  m_EditorClassIdentifier: 
+  _tower: 2
+  _reloadDuration: 10
+  _projectilePrefab: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
+  Sound: {fileID: 8300000, guid: e8d1dbff67d315e4395b0f412880a068, type: 3}
+  _maxDistance: 80
+  _minDistance: 15
+  _rotationSpeed: 20
+  _useYaw: 1
+  _usePitch: 1

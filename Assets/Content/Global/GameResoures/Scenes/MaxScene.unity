@@ -2002,6 +2002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FattyMortarG02
       objectReference: {fileID: 0}
+    - target: {fileID: 1591110490357510, guid: d4af3966dba2cd746ab019083640eb8c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4459613001278838, guid: d4af3966dba2cd746ab019083640eb8c, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7660445
@@ -2833,7 +2837,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3154097705721210391, guid: ecf8bcd92a09da14ea3db0b2c3dc331a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.686653
+      value: 6.85
       objectReference: {fileID: 0}
     - target: {fileID: 3154097705721210391, guid: ecf8bcd92a09da14ea3db0b2c3dc331a, type: 3}
       propertyPath: m_LocalPosition.y

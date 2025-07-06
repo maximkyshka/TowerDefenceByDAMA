@@ -3,10 +3,13 @@ using System.Collections;
 
 public class TurretWeaponSystem : MonoBehaviour
 {
+    private TurretSettings _settings;
+    
     [SerializeField] private Transform[] _projectileSpawnPoints;
-    [SerializeField] private float _reloadDuration = 1.0f;
+    
     [SerializeField] private ParticleSystem[] _firingParticles;
-    [SerializeField] private GameObject _projectilePrefab;
+    
+    [SerializeField] private AudioSource[] _audioSource;
 
     private TurretController _turretController;
     private Transform _currentTarget;
@@ -14,10 +17,8 @@ public class TurretWeaponSystem : MonoBehaviour
 
     private void Awake()
     {
-        if (_turretController == null)
-        {
-            _turretController = GetComponent<TurretController>();
-        }
+        _turretController = GetComponent<TurretController>();
+        _settings = _turretController.GetSettings();
         
         StartCoroutine(ReloadCooldown());
     }
@@ -38,13 +39,20 @@ public class TurretWeaponSystem : MonoBehaviour
 
         foreach (var spawnPoint in _projectileSpawnPoints)
         {
-            GameObject projectileInstance = Instantiate(_projectilePrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject projectileInstance = Instantiate(_settings.ProjectilePrefab, spawnPoint.position, spawnPoint.rotation);
             
             var bulletController = projectileInstance.GetComponent<BulletController>();
+            
             if (bulletController != null)
             {
                 bulletController.Launch(_currentTarget);
             }
+        }
+
+        foreach (var Source in _audioSource)
+        {
+            Source.clip = _settings.SoundClip;
+            Source.Play();
         }
 
         foreach (var particle in _firingParticles)
@@ -57,7 +65,7 @@ public class TurretWeaponSystem : MonoBehaviour
 
     private IEnumerator ReloadCooldown()
     {
-        yield return new WaitForSeconds(_reloadDuration);
+        yield return new WaitForSeconds(_settings.ReloadDuration);
         _isReadyToFire = true;
     }
 }

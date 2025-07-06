@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9f9a9500c7e1874dac98b71ea80215a, type: 3}
-  m_Name: TurretCannon
+  m_Name: UITurretMortar
   m_EditorClassIdentifier: 
-  _name: TurretCannon
-  _image: {fileID: 21300000, guid: db02d0eed87618b48b426430e8acdf7f, type: 3}
-  _tower: 0
-  _price: 15
+  _name: TurretMortar
+  _image: {fileID: 21300000, guid: c1349cb458d4ba3458d63dc0988544dd, type: 3}
+  _tower: 3
+  _price: 25
   _reloadTime: 0

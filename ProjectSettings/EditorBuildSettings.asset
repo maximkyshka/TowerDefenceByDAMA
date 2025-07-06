@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Content/Global/GameResoures/Scenes/AndriiScene.unity
+    path: Assets/Content/Global/GameResoures/Scenes/AndriiSceneMenu.unity
     guid: b092bca53048bb846b9bd9bd6d2200f6
   m_configObjects: {}

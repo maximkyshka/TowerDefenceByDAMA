@@ -3,16 +3,16 @@ using System.Linq;
 
 public class TurretAimingAI : MonoBehaviour
 {
+    private TurretSettings _settings;
+    
     private TurretController _turretController;
     
-    private Transform[] _potentialTargets;
-    
-    [SerializeField, Range(0, 100)] private float _maxDistance = 50f;
-    [SerializeField, Range(0, 100)] private float _minDistance = 5f;
+    [SerializeField] private Transform[] _potentialTargets;
 
     private void Awake()
     {
         _turretController = GetComponent<TurretController>();
+        _settings = _turretController.GetSettings();
         InvokeRepeating(nameof(FindTargets), 0, 1f);
     }
 
@@ -30,14 +30,14 @@ public class TurretAimingAI : MonoBehaviour
         }
 
         Transform bestTarget = null;
-        float closestDistance = _maxDistance;
+        float closestDistance = _settings.MaxDistance;
         
         foreach (var potentialTarget in _potentialTargets)
         {
             if (potentialTarget == null) continue;
             
             float distanceToTarget = Vector3.Distance(transform.position, potentialTarget.position);
-            if (distanceToTarget < closestDistance && distanceToTarget > _minDistance)
+            if (distanceToTarget < closestDistance && distanceToTarget > _settings.MinDistance)
             {
                 closestDistance = distanceToTarget;
                 bestTarget = potentialTarget;
@@ -49,7 +49,7 @@ public class TurretAimingAI : MonoBehaviour
             var direction = bestTarget.position - transform.position;
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             
-            float pitch = (closestDistance - _minDistance) / (_maxDistance - _minDistance) * 80f;
+            float pitch = (closestDistance - _settings.MinDistance) / (_settings.MaxDistance - _settings.MinDistance) * 80f;
             float yaw = lookRotation.eulerAngles.y;
             
             _turretController.SetAim(pitch, yaw, bestTarget); 

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4905286732937208}
   - component: {fileID: 198190432169522098}
   - component: {fileID: 199449255769242030}
+  - component: {fileID: 1356775007944332595}
   m_Layer: 0
   m_Name: FireFx
   m_TagString: Untagged
@@ -4929,6 +4930,102 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!82 &1356775007944332595
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412543531084458}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1437313607789798
 GameObject:
   m_ObjectHideFlags: 0
@@ -5120,7 +5217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543343654471068}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1.9444147e-12, z: -0, w: -1}
+  m_LocalRotation: {x: -0, y: 2.1312889e-35, z: -0, w: -1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5177,13 +5274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9c60a4c4383a642afbe1c4a9f8dd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tower: 0
+  _settings: {fileID: 11400000, guid: df861110057e8c540b2a51b734a41557, type: 2}
   _turret: {fileID: 4722236510932744}
   _barrel: {fileID: 4597034265451690}
-  _yaw: 0
   _pitch: 0
-  _usePitch: 1
-  _rotationSpeed: 1
+  _yaw: 0
 --- !u!114 &2790820721428323414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5196,9 +5291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41764f7df3f78914daabfa59151cbcd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rayPoint: {fileID: 4905286732937208}
-  _maxDistance: 100
-  _minDistance: 15
+  _potentialTargets: []
 --- !u!114 &638449346716036805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5213,10 +5306,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileSpawnPoints:
   - {fileID: 4905286732937208}
-  _reloadDuration: 15
   _firingParticles:
   - {fileID: 198190432169522098}
-  _projectilePrefab: {fileID: 1833988619539146, guid: 9318a11cd670f3d4f924ff92fe7b0c77, type: 3}
+  _audioSource:
+  - {fileID: 1356775007944332595}
 --- !u!1 &1931211189434318
 GameObject:
   m_ObjectHideFlags: 0
