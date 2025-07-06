@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO/Crispy.meta
 guid: 69dab33ce4f44e841848212dede5e1ea
+========
+guid: 47a1cc7791b33824c9cc945a7c6843a0
+>>>>>>>> Stashed changes:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

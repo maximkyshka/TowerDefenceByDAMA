@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack.meta
 guid: 35a0db5b2a1f5aa4291aa6a53bee5cac
 ========
 guid: 47a1cc7791b33824c9cc945a7c6843a0
 >>>>>>>> Stashed changes:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO.meta
+=======
+<<<<<<<< Updated upstream:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO/Button.meta
+guid: 287df1a6cc800064d974b2a00c2cf9fc
+========
+guid: 35a0db5b2a1f5aa4291aa6a53bee5cac
+>>>>>>>> Stashed changes:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO/Liquid.meta
 guid: cf6d4e77354cabe48b7af56ca66c98de
+========
+guid: 287df1a6cc800064d974b2a00c2cf9fc
+>>>>>>>> Stashed changes:Assets/Content/Global/GameResoures/Sound/Free UI Click Sound Effects Pack/AUDIO/Button.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
