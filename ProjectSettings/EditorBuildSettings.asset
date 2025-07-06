@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Content/Global/GameResoures/Scenes/AndriiSceneMenu.unity
     guid: b092bca53048bb846b9bd9bd6d2200f6
+  - enabled: 1
+    path: Assets/Content/Global/GameResoures/Scenes/Level1Andrii.unity
+    guid: dff49519e2d354a4caee1b8170fe8924
+  - enabled: 1
+    path: Assets/Content/Global/GameResoures/Scenes/Level2Andrii.unity
+    guid: a2c471d105934c141998e87ac32e1ac6
+  - enabled: 1
+    path: Assets/Content/Global/GameResoures/Scenes/Level3Andrii.unity
+    guid: 97bf38bb449f49243a5dd1d696776525
   m_configObjects: {}
