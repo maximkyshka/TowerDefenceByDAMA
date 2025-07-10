@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Game
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 4d390758bf369164bb3a8e654cd08469
   m_Children: []
@@ -48,6 +48,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 601917927918296940}
+  - {fileID: -3140638222468806800}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -71,6 +72,44 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!244 &-3140638222468806800
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 51438fa3aefa5d5418e30a761107e880
+  m_EffectName: Echo
+  m_MixLevel: c347893da93418c40b39f19ad7f47560
+  m_Parameters:
+  - m_ParameterName: Delay
+    m_GUID: a2122984da6a9d94fb4fe5be6040d8cc
+  - m_ParameterName: Decay
+    m_GUID: 2f6509ca4742d464e89bb5193a48da9f
+  - m_ParameterName: Max channels
+    m_GUID: 472c1a019a01967429fb81844565cb78
+  - m_ParameterName: Drymix
+    m_GUID: 8d9dfa2e783aa7c44aaf03ce000b06eb
+  - m_ParameterName: Wetmix
+    m_GUID: a529cdd398a64f34099b77aa884d4ec5
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &-1737554323604098715
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 84ff76845c6617943b3582f95eecc261
+  m_EffectName: Send
+  m_MixLevel: ce7525401de34764db6d2eae6cf4e3fd
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -106,8 +145,8 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 644433b65f8f88d4b93129fe56d2fe68
   m_Children:
-  - {fileID: -4841946703227820832}
   - {fileID: -4326389919884934270}
+  - {fileID: -4841946703227820832}
   - {fileID: -3160446522714181680}
   m_Volume: 6a6cb06b0bdf49f4d8fd3ca499c030a3
   m_Pitch: 6a881e80900577a49994ada2990a0ad8
