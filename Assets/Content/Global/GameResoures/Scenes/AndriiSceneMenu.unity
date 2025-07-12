@@ -782,6 +782,7 @@ RectTransform:
   - {fileID: 977777146}
   - {fileID: 1714865360}
   - {fileID: 2054373541}
+  - {fileID: 869323081}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -803,9 +804,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SliderMaster: {fileID: 1924166713}
   SliderSFX: {fileID: 0}
-  SliderMusic: {fileID: 464888924}
-  SliderMenu: {fileID: 0}
-  _mixer: {fileID: 0}
+  SliderMusic: {fileID: 0}
+  SliderMenu: {fileID: 2141547221}
+  _mixer: {fileID: 24100000, guid: c0a3fdf1150488b47843e8003e6fada3, type: 2}
 --- !u!1001 &263432491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2663,6 +2664,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224496662156944248, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224496662156944248, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.4657
+      objectReference: {fileID: 0}
     - target: {fileID: 224760244105394208, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2757,7 +2766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224802459085376562, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 157.3976
+      value: 153.6
       objectReference: {fileID: 0}
     - target: {fileID: 224802459085376562, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
       propertyPath: m_SizeDelta.y
@@ -2765,7 +2774,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224802459085376562, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 87.0089
+      value: 88.907
       objectReference: {fileID: 0}
     - target: {fileID: 224802459085376562, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2788,6 +2797,55 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224760244105394208, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
   m_PrefabInstance: {fileID: 847512100}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &869323079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 869323081}
+  - component: {fileID: 869323080}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &869323080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869323079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea1ef5836022944496b19c41445b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderMaster: {fileID: 464888924}
+  SliderSFX: {fileID: 1924166713}
+  SliderMusic: {fileID: 0}
+  SliderMenu: {fileID: 2141547221}
+  _mixer: {fileID: 24100000, guid: c0a3fdf1150488b47843e8003e6fada3, type: 2}
+--- !u!4 &869323081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869323079}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.982587, y: 47.79676, z: -4.4531646}
+  m_LocalScale: {x: 2.178847, y: 2.178847, z: 2.178847}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 207014070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899123509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5976,6 +6034,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224760244105394208, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
   m_PrefabInstance: {fileID: 2141547219}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2141547221 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114076196824389786, guid: 7020d1ba6d18a4c59b698daa55fe0dc8, type: 3}
+  m_PrefabInstance: {fileID: 2141547219}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
