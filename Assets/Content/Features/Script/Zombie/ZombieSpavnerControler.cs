@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections.Generic;
 using Random = System.Random;
@@ -6,7 +7,9 @@ public class ZombieSpavnerControler : MonoBehaviour
 {
     [SerializeField] private VictoryBarControler _victoryBarControler;
     
-    [SerializeField] private Transform[] _targetPoints;
+    [SerializeField] private ZombieWay _way;
+    
+    private Transform[] _targetPoints;
     
     [SerializeField] private GameObject[] _zombiePrefab;
 
@@ -15,6 +18,11 @@ public class ZombieSpavnerControler : MonoBehaviour
     [SerializeField, Range(0, 30f)] private float _spawnInterval;
     
     private Random _random = new Random();
+
+    private void Awake()
+    {
+        _targetPoints = _way.Points;
+    }
 
     private void Start()
     {

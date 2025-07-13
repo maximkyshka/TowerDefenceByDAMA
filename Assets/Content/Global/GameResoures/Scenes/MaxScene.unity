@@ -1163,6 +1163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 713330392}
+  - component: {fileID: 713330393}
   m_Layer: 0
   m_Name: ZombieTargetPoint
   m_TagString: Untagged
@@ -1191,6 +1192,28 @@ Transform:
   - {fileID: 1109351500}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &713330393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713330391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05322194d1528054e830cb2bca8cb282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _points:
+  - {fileID: 1733347863}
+  - {fileID: 1529375606}
+  - {fileID: 1913153679}
+  - {fileID: 1246595209}
+  - {fileID: 1152472320}
+  - {fileID: 1781036095}
+  - {fileID: 1109351500}
+  _debug: 1
+  _debugColor: {r: 0.9737315, g: 1, b: 0, a: 1}
 --- !u!1001 &747771300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1521,7 +1544,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.16117059, y: -0.688494, z: 0.16117059, w: 0.688494}
-  m_LocalPosition: {x: 0.00000021547085, y: 6.78, z: -10}
+  m_LocalPosition: {x: 24.07, y: 6.78, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2110,9 +2133,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1109351500}
   m_Layer: 0
-  m_Name: Point5
+  m_Name: Point6
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2125,7 +2148,7 @@ Transform:
   m_GameObject: {fileID: 1109351499}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.83, y: -0.2855299, z: 6.89}
+  m_LocalPosition: {x: -1.83, y: 0, z: 6.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2146,9 +2169,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1152472320}
   m_Layer: 0
-  m_Name: Point3
+  m_Name: Point4
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2161,7 +2184,7 @@ Transform:
   m_GameObject: {fileID: 1152472319}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.22, y: -0.2855299, z: -5.4}
+  m_LocalPosition: {x: -13.53, y: 0, z: -2.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2177,9 +2200,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1246595209}
   m_Layer: 0
-  m_Name: Point2
+  m_Name: Point3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2192,7 +2215,7 @@ Transform:
   m_GameObject: {fileID: 1246595208}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.64, y: -0.2855299, z: 5.36}
+  m_LocalPosition: {x: -18.24, y: 0, z: -9.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2350,9 +2373,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1529375606}
   m_Layer: 0
-  m_Name: Point0
+  m_Name: Point1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2365,7 +2388,7 @@ Transform:
   m_GameObject: {fileID: 1529375605}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.25, y: -0.2855299, z: 5.58}
+  m_LocalPosition: {x: 8.34, y: 0, z: -22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2464,7 +2487,7 @@ GameObject:
   m_Layer: 0
   m_Name: ZombieSpavner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2481,13 +2504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _victoryBarControler: {fileID: 963194233}
-  _targetPoints:
-  - {fileID: 1529375606}
-  - {fileID: 1913153679}
-  - {fileID: 1246595209}
-  - {fileID: 1152472320}
-  - {fileID: 1781036095}
-  - {fileID: 1109351500}
+  _way: {fileID: 713330393}
   _zombiePrefab:
   - {fileID: 5203014028200098518, guid: 9a899a84633144c4f8732c6bfc7159b2, type: 3}
   - {fileID: 5268361738411861714, guid: afedef7656184304cb53fb6d1bdf7bf9, type: 3}
@@ -2502,7 +2519,7 @@ Transform:
   m_GameObject: {fileID: 1733347861}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.759, y: 1.858, z: 0.392}
+  m_LocalPosition: {x: 0.93, y: 0, z: 5.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2518,9 +2535,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1781036095}
   m_Layer: 0
-  m_Name: Point4
+  m_Name: Point5
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2533,7 +2550,7 @@ Transform:
   m_GameObject: {fileID: 1781036094}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.28, y: -0.2855299, z: -12.69}
+  m_LocalPosition: {x: -13.73, y: 0, z: -14.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2797,9 +2814,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1913153679}
   m_Layer: 0
-  m_Name: Point1
+  m_Name: Point2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2812,7 +2829,7 @@ Transform:
   m_GameObject: {fileID: 1913153678}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.43, y: -0.2855299, z: -11.93}
+  m_LocalPosition: {x: -16.76, y: 0, z: -18.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
