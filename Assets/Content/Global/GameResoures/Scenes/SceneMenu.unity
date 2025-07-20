@@ -868,6 +868,7 @@ GameObject:
   - component: {fileID: 119984255}
   - component: {fileID: 119984254}
   - component: {fileID: 119984252}
+  - component: {fileID: 119984259}
   m_Layer: 5
   m_Name: CanvasMenu (1)
   m_TagString: Untagged
@@ -1000,6 +1001,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &119984259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119984251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ea1ef5836022944496b19c41445b2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SliderMaster: {fileID: 2141547221}
+  SliderSFX: {fileID: 1924166713}
+  SliderMusic: {fileID: 464888924}
+  SliderMenu: {fileID: 2141547221}
+  _mixer: {fileID: 24100000, guid: c0a3fdf1150488b47843e8003e6fada3, type: 2}
 --- !u!1 &122525562
 GameObject:
   m_ObjectHideFlags: 0
