@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//public class ScriptForHealthToMainTower : MonoBehaviour
-//{
+public class ScriptForHealthToMainTower : MonoBehaviour
+{
 
-//    public float maxHealth = 1000f;
-//    public float currentHealth;
-//    public SliderHp healthBar; // Змінна для шкали здоров’я
+    [SerializeField] private float maxHealth = 1000f;
+    [SerializeField] private float currentHealth;
+    [SerializeField] private Slider healthBar;
+    [SerializeField] private bool DEBUG;
 
-//    void Start()
-//    {
-//        currentHealth = maxHealth;
-//        UpdateHealthBar();
-//    }
+    void Start()
+    {
+        currentHealth = maxHealth;
+        UpdateHealthBar();
+    }
 
-//    void UpdateHealthBar()
-//    {
-//        if (healthBar != null) // Перевірка, чи підключено healthBar
-//        {
-//            healthBar.value = currentHealth / maxHealth;
-//        }
-//        else
-//        {
-//            Debug.LogWarning("Health Bar не підключено до скрипта!");
-//        }
-//    }
-//}
+    void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth / maxHealth; 
+        }
+        else if (DEBUG)
+        {
+            Debug.LogWarning("Health Bar пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ!");
+        }
+    }
+}
