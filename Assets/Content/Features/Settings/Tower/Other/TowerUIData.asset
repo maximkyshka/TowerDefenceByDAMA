@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9f9a9500c7e1874dac98b71ea80215a, type: 3}
   m_Name: TowerUIData
   m_EditorClassIdentifier: 
-  _name: 
+  _name: MoneyBox
   _image: {fileID: 0}
-  _tower: 0
-  _price: 0
+  _tower: 4
+  _price: 10
