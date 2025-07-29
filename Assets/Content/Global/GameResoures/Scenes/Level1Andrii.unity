@@ -16978,6 +16978,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 436635431729975006, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _slider
+      value: 
+      objectReference: {fileID: 1803033100}
+    - target: {fileID: 436635431729975006, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _zombieSpavner
+      value: 
+      objectReference: {fileID: 1917693854}
     - target: {fileID: 1134593778169401222, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: m_LocalPosition.x
       value: 437.4
@@ -18706,6 +18714,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796937315}
   m_CullTransparentMesh: 1
+--- !u!114 &1803033100 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1632995340221597556, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
+  m_PrefabInstance: {fileID: 1147855384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1827938483
 GameObject:
   m_ObjectHideFlags: 0
@@ -18888,6 +18907,10 @@ PrefabInstance:
       propertyPath: _way
       value: 
       objectReference: {fileID: 688646613}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: waveLevel
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: _spawnInterval
       value: 2.18
@@ -19530,6 +19553,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 87cc36a45a321ad478c47c9fec13dbd3, type: 3}
   m_PrefabInstance: {fileID: 1900694270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1917693854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3037769356445088139, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+  m_PrefabInstance: {fileID: 1847293318}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1934736496
 GameObject:

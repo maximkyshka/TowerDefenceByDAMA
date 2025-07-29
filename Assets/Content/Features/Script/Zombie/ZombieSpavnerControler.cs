@@ -15,8 +15,6 @@ public class ZombieSpavnerControler : MonoBehaviour
 
     [SerializeField] private List<GameObject> _zombie = new List<GameObject>();
     
-    [SerializeField, Range(0, 30f)] private float _spawnInterval;
-    
     private Random _random = new Random();
     
     [SerializeField, Range(1, 3)] private int waveLevel = 1;
@@ -73,7 +71,7 @@ public class ZombieSpavnerControler : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            UpdateVictoryBar(4);
+            UpdateVictoryBar(5);
             SpawnZombie(0);
             yield return new WaitForSeconds(_random.Next(7, 13));
         }
