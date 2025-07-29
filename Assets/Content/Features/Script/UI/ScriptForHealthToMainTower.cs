@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScriptForHealthToMainTower : MonoBehaviour
+public class HealthMainTower : MonoBehaviour
 {
 
     [SerializeField] private float maxHealth = 1000f;
@@ -22,10 +22,6 @@ public class ScriptForHealthToMainTower : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.value = currentHealth / maxHealth; 
-        }
-        else if (DEBUG)
-        {
-            Debug.LogWarning("Health Bar �� ��������� �� �������!");
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,19 +6,22 @@ public class VictoryBarControler : MonoBehaviour
 {
     [SerializeField] private GameObject _zombieSpavner;
     [SerializeField] private Slider _slider;
-    [SerializeField] private int _pointCount;
+    private int _point = 0;
 
-    private void Awake()
+    private void Start()
     {
-        _pointCount = _zombieSpavner.GetComponent<ZombieSpavnerControler>().GetPointCount();
+        _slider.onValueChanged.AddListener(delegate { sliderRefresh(); });
+        sliderRefresh();
     }
 
-    public void ReLoadSlideBar(int MaxPoint)
+    private void sliderRefresh()
     {
-        if (MaxPoint != 0)
-        {
-            _slider.value = MaxPoint / (float)_pointCount;
-            Debug.Log(MaxPoint / (float)_pointCount);
-        }
+        _slider.value = _point;
+    }
+
+    public void ReLoadSlideBar(int Point)
+    {
+        _point = Point;
+        sliderRefresh();
     }
 }
