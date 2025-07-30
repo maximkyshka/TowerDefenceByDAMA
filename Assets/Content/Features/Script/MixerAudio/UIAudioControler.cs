@@ -4,126 +4,123 @@ using UnityEngine.UI;
 using System.IO;
 using System;
 
-    public class UIAudioControler : MonoBehaviour
+public class UIAudioControler : MonoBehaviour
+{
+    private const int MAX_VOLUME = 20;
+    private const int MIN_VOLUME = -80;
+    private const string SAVE_FILE_NAME = "VolumeData.json";
+    
+    private static readonly System.Collections.Generic.Dictionary<string, string> VolumeParameters = new System.Collections.Generic.Dictionary<string, string>
     {
-        const int MAX_VOLUME = 20;
-        const int MIN_VOLUME = -80;
-        
-        [SerializeField] private Slider SliderMaster;
-        [SerializeField] private Slider SliderSFX;
-        [SerializeField] private Slider SliderMusic;
-        [SerializeField] private Slider SliderMenu;
+        { "Master", "MasterVolume" },
+        { "SFX", "SFXVolume" },
+        { "Music", "MusicVolume" },
+        { "Menu", "MenuVolume" }
+    };
 
-        [SerializeField] private AudioMixer _mixer;
+    [SerializeField] private Slider SliderMaster;
+    [SerializeField] private Slider SliderSFX;
+    [SerializeField] private Slider SliderMusic;
+    [SerializeField] private Slider SliderMenu;
 
-        private VolumeData _volume;
+    [SerializeField] private AudioMixer _mixer;
+
+    private VolumeData _volume;
+    private string _savePath;
+
+    private void Awake()
+    {
+        _savePath = Path.Combine(Application.persistentDataPath, SAVE_FILE_NAME);
         
-        private void Awake()
+        LoadData();
+        ApplyVolumeToMixer();
+        SetupSliders();
+        AddSliderListeners();
+    }
+
+    private void SetupSliders()
+    {
+        SetupSlider(SliderMaster, _volume.Master);
+        SetupSlider(SliderSFX, _volume.SFX);
+        SetupSlider(SliderMusic, _volume.Music);
+        SetupSlider(SliderMenu, _volume.Menu);
+    }
+    
+    private void SetupSlider(Slider slider, float value)
+    {
+        slider.minValue = MIN_VOLUME;
+        slider.maxValue = MAX_VOLUME;
+        slider.value = value;
+    }
+
+    private void AddSliderListeners()
+    {
+        SliderMaster.onValueChanged.AddListener(value => ChangeVolume("Master", value));
+        SliderSFX.onValueChanged.AddListener(value => ChangeVolume("SFX", value));
+        SliderMusic.onValueChanged.AddListener(value => ChangeVolume("Music", value));
+        SliderMenu.onValueChanged.AddListener(value => ChangeVolume("Menu", value));
+    }
+    
+    private void ApplyVolumeToMixer()
+    {
+        _mixer.SetFloat(VolumeParameters["Master"], _volume.Master);
+        _mixer.SetFloat(VolumeParameters["SFX"], _volume.SFX);
+        _mixer.SetFloat(VolumeParameters["Music"], _volume.Music);
+        _mixer.SetFloat(VolumeParameters["Menu"], _volume.Menu);
+    }
+
+    public void ChangeVolume(string type, float value)
+    {
+        if (!VolumeParameters.ContainsKey(type)) return;
+
+        _mixer.SetFloat(VolumeParameters[type], value);
+
+        switch (type)
         {
-            LoadData();
-            
-            
-            SliderMaster.minValue = MIN_VOLUME;
-            SliderMaster.maxValue = MAX_VOLUME;
-            
-            SliderSFX.minValue = MIN_VOLUME;
-            SliderSFX.maxValue = MAX_VOLUME;
-            
-            SliderMusic.minValue = MIN_VOLUME;
-            SliderMusic.maxValue = MAX_VOLUME;
-            
-            SliderMenu.minValue = MIN_VOLUME;
-            SliderMenu.maxValue = MAX_VOLUME;
-            
-            
-            SliderMaster.value = _volume.Master;
-            SliderSFX.value = _volume.SFX;
-            SliderMusic.value = _volume.Music;
-            SliderMenu.value = _volume.Menu;
-            
-            SliderMaster.onValueChanged.AddListener(ChangeVolumeMaster);
-            SliderSFX.onValueChanged.AddListener(ChangeVolumeSFX);
-            SliderMusic.onValueChanged.AddListener(ChangeVolumeMusic);
-            SliderMenu.onValueChanged.AddListener(ChangeVolumeMenu);
+            case "Master": _volume.Master = value; break;
+            case "SFX": _volume.SFX = value; break;
+            case "Music": _volume.Music = value; break;
+            case "Menu": _volume.Menu = value; break;
         }
 
-        public void ReLoadAudio()
-        {
-            _volume.Master = SliderMaster.value;
-            _volume.SFX = SliderSFX.value;
-            _volume.Music = SliderMusic.value;
-            _volume.Menu = SliderMenu.value;
+        SaveData();
+    }
 
-            _mixer.SetFloat("MasterVolume", _volume.Master);
-            _mixer.SetFloat("SFXVolume", _volume.SFX);
-            _mixer.SetFloat("MusicVolume", _volume.Music);
-            _mixer.SetFloat("MenuVolume", _volume.Menu);
+    public void SaveData()
+    {
+        string json = JsonUtility.ToJson(_volume, true);
+        File.WriteAllText(_savePath, json);
+    }
 
-            SaveData();
-        }
-
-        public void ChangeVolumeMaster(float value)
+    public void LoadData()
+    {
+        if (File.Exists(_savePath))
         {
-            _volume.Master = value;
+            string json = File.ReadAllText(_savePath);
+            _volume = JsonUtility.FromJson<VolumeData>(json);
             
-            _mixer.SetFloat("MasterVolume", _volume.Master);
-            
-            SaveData();
-        }
-        
-        public void ChangeVolumeSFX(float value)
-        {
-            _volume.SFX = value;
-            
-            _mixer.SetFloat("SFXVolume", _volume.SFX);
-            
-            SaveData();
-        }
-        public void ChangeVolumeMusic(float value)
-        {
-            _volume.Music = value;
-            
-            _mixer.SetFloat("MusicVolume", _volume.Music);
-            
-            SaveData();
-        }
-        
-        
-        public void ChangeVolumeMenu(float value)
-        {
-            _volume.Menu = value;
-            
-            _mixer.SetFloat("MenuVolume", _volume.Menu);
-            
-            SaveData();
-        }
-        
-
-        public void SaveData()
-        {
-            string json = JsonUtility.ToJson(_volume);
-            Debug.Log(json);
-
-            using (StreamWriter writer = new StreamWriter(Application.dataPath + Path.AltDirectorySeparatorChar + "SaveVolumeData.json"))
+            if (_volume == null)
             {
-                writer.Write(json);
+                CreateDefaultVolumeData();
             }
         }
-
-        public void LoadData()
+        else
         {
-            string json = string.Empty;
-
-            using (StreamReader reader = new StreamReader(Application.dataPath + Path.AltDirectorySeparatorChar + "SaveVolumeData.json"))
-            {
-                json = reader.ReadToEnd();
-            }
-
-            VolumeData data = JsonUtility.FromJson<VolumeData>(json);
-            _volume = data;
+            CreateDefaultVolumeData();
         }
     }
 
+    private void CreateDefaultVolumeData()
+    {
+        _volume = new VolumeData
+        {
+            Master = MAX_VOLUME,
+            SFX = MAX_VOLUME,
+            Music = MAX_VOLUME,
+            Menu = MAX_VOLUME
+        };
+    }
+}
 
 [Serializable]
 public class VolumeData

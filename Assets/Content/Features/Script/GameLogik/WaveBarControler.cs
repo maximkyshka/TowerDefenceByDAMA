@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VictoryBarControler : MonoBehaviour
+public class WaveBarControler : MonoBehaviour
 {
     [SerializeField] private GameObject _zombieSpavner;
     [SerializeField] private Slider _slider;

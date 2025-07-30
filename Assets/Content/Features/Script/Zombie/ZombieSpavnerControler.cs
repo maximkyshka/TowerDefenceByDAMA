@@ -5,7 +5,7 @@ using Random = System.Random;
 
 public class ZombieSpavnerControler : MonoBehaviour
 {
-    [SerializeField] private VictoryBarControler _victoryBarControler;
+    [SerializeField] private WaveBarControler _victoryBarControler;
     
     [SerializeField] private ZombieWay _way;
     
@@ -13,7 +13,7 @@ public class ZombieSpavnerControler : MonoBehaviour
     
     [SerializeField] private GameObject[] _zombiePrefab;
 
-    [SerializeField] private List<GameObject> _zombie = new List<GameObject>();
+    [SerializeField] private List<GameObject> _zombie;
     
     private Random _random = new Random();
     
@@ -93,6 +93,12 @@ public class ZombieSpavnerControler : MonoBehaviour
             SpawnZombie(1);
             yield return new WaitForSeconds(_random.Next(10, 15));
         }
+        
+        while (true)
+        {
+            END();
+            yield return new WaitForSeconds(1);
+        }
     }
     
     IEnumerator wave2()
@@ -101,7 +107,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         {
             UpdateVictoryBar(2);
             SpawnZombie(0);
-            yield return new WaitForSeconds(_random.Next(7, 13));
+            yield return new WaitForSeconds(_random.Next(3, 5));
         }
         
         yield return new WaitForSeconds(_random.Next(15, 20));
@@ -110,7 +116,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         {
             UpdateVictoryBar(5);
             SpawnZombie(_random.Next(0, 1));
-            yield return new WaitForSeconds(_random.Next(10, 15));
+            yield return new WaitForSeconds(_random.Next(5, 7));
         }
         
         yield return new WaitForSeconds(_random.Next(15, 20));
@@ -119,7 +125,13 @@ public class ZombieSpavnerControler : MonoBehaviour
         {
             UpdateVictoryBar(3);
             SpawnZombie(1);
-            yield return new WaitForSeconds(_random.Next(7, 13));
+            yield return new WaitForSeconds(_random.Next(4, 6));
+        }
+        
+        while (true)
+        {
+            END();
+            yield return new WaitForSeconds(1);
         }
     }
     
@@ -129,7 +141,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         {
             UpdateVictoryBar(1);
             SpawnZombie(0);
-            yield return new WaitForSeconds(_random.Next(5, 10));
+            yield return new WaitForSeconds(_random.Next(2, 4));
         }
         
         yield return new WaitForSeconds(_random.Next(10, 15));
@@ -147,7 +159,29 @@ public class ZombieSpavnerControler : MonoBehaviour
         {
             UpdateVictoryBar(1);
             SpawnZombie(1);
-            yield return new WaitForSeconds(_random.Next(8, 14));
+            yield return new WaitForSeconds(_random.Next(4, 6));
+        }
+
+        while (true)
+        {
+            END();
+            yield return new WaitForSeconds(1);
+        }
+    }
+
+    void END()
+    {
+        int t = 0;
+
+        foreach (var zombie in _zombie)
+        {
+            t += zombie == null ? 0 : 1;
+        }
+
+        if (t == 0)
+        {
+            GameObject.FindGameObjectWithTag("MainCamera").
+                GetComponent<GameControl>().GameWin();
         }
     }
 }

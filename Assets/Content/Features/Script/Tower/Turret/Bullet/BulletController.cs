@@ -20,8 +20,6 @@ public class BulletController : MonoBehaviour
     {
         _target = newTarget;
         Destroy(gameObject, _lifeTime);
-        var direction = _target.position - transform.position;  
-        _targetRotation = Quaternion.LookRotation(direction);
     }
     
     private void FixedUpdate()
@@ -32,6 +30,9 @@ public class BulletController : MonoBehaviour
         {
             return;
         }
+        
+        var direction = _target.position - transform.position;  
+        _targetRotation = Quaternion.LookRotation(direction);
         
         _rigidbody.MoveRotation(Quaternion.Slerp(transform.rotation, _targetRotation, 
             Time.fixedDeltaTime * _rotationSpeed));

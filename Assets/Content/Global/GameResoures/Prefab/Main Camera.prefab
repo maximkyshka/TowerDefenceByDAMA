@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5571571062007901032}
   - component: {fileID: 3869852265637688384}
   - component: {fileID: 436635431729975006}
+  - component: {fileID: 4902239105130194690}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -205,4 +206,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _zombieSpavner: {fileID: 0}
   _slider: {fileID: 0}
-  _pointCount: 0
+--- !u!114 &4902239105130194690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798665566368854141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53660f4f45a34344293992a163a4ebda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: 0
