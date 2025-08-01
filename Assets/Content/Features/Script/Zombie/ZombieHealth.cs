@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 public class ZombieHealth : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
-    [SerializeField, Range(0, 100)] private int _health;
+    [SerializeField, Range(0, 1000)] private int _health;
     
     [SerializeField] private bool _canRegenerate;
     [SerializeField] private float _regenerationInterval;
@@ -15,12 +15,14 @@ public class ZombieHealth : MonoBehaviour
     
     private void Start()
     {
-        ReLoadSlider();
-        
         if (_canRegenerate)
             InvokeRepeating(nameof(Regenerate), _regenerationInterval, _regenerationInterval);
         
         _cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        
+        _slider.maxValue = _health;
+        
+        ReLoadSlider();
     }
     
     private void Regenerate()
@@ -43,7 +45,7 @@ public class ZombieHealth : MonoBehaviour
     
     public void ReLoadSlider()
     {
-        _slider.value = _health / 100f;
+        _slider.value = _health;
     }
 
     private void Update()
