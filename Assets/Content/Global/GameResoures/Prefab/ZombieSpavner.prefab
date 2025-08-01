@@ -49,5 +49,8 @@ MonoBehaviour:
   _zombiePrefab:
   - {fileID: 5203014028200098518, guid: 9a899a84633144c4f8732c6bfc7159b2, type: 3}
   - {fileID: 5268361738411861714, guid: afedef7656184304cb53fb6d1bdf7bf9, type: 3}
+  - {fileID: 5203014028200098518, guid: 8cb6a0aac3ea5ee4e90bf24df53ffaec, type: 3}
+  - {fileID: 5268361738411861714, guid: 661a4274130b9f74db1636a867d61af1, type: 3}
+  - {fileID: 5203014028200098518, guid: 97b30b5326b510f43be16ebc284a70f0, type: 3}
   _zombie: []
-  _spawnInterval: 3.99
+  waveLevel: 1

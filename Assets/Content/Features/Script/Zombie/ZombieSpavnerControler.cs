@@ -69,11 +69,11 @@ public class ZombieSpavnerControler : MonoBehaviour
 
     IEnumerator wave1()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 10; i++)
         {
-            UpdateVictoryBar(5);
+            UpdateVictoryBar(2);
             SpawnZombie(0);
-            yield return new WaitForSeconds(_random.Next(7, 13));
+            yield return new WaitForSeconds(_random.Next(4, 7));
         }
         
         yield return new WaitForSeconds(_random.Next(15, 20));
@@ -89,8 +89,8 @@ public class ZombieSpavnerControler : MonoBehaviour
         
         for (int i = 0; i < 5; i++)
         {
-            UpdateVictoryBar(5);
-            SpawnZombie(1);
+            UpdateVictoryBar(6);
+            SpawnZombie(_random.Next(0, 2));
             yield return new WaitForSeconds(_random.Next(10, 15));
         }
         
@@ -106,7 +106,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(2);
-            SpawnZombie(0);
+            SpawnZombie(_random.Next(0, 1));
             yield return new WaitForSeconds(_random.Next(3, 5));
         }
         
@@ -115,7 +115,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(5);
-            SpawnZombie(_random.Next(0, 1));
+            SpawnZombie(_random.Next(0, 1) == 0 ? 0 : 2);
             yield return new WaitForSeconds(_random.Next(5, 7));
         }
         
@@ -124,7 +124,22 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(3);
-            SpawnZombie(1);
+            SpawnZombie(_random.Next(0, 1) == 0 ? 1 : 3);
+            yield return new WaitForSeconds(_random.Next(4, 6));
+        }
+        
+        for (int i = 0; i < 10; i++)
+        {
+            UpdateVictoryBar(3);
+            SpawnZombie(_random.Next(0, 4));
+            if (i == 6)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    yield return new WaitForSeconds(_random.Next(4, 10));
+                    SpawnZombie(4);
+                }
+            }
             yield return new WaitForSeconds(_random.Next(4, 6));
         }
         
@@ -140,7 +155,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(0);
+            SpawnZombie(_random.Next(0, 1) == 0 ? 0 : 2);
             yield return new WaitForSeconds(_random.Next(2, 4));
         }
         
@@ -149,7 +164,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 50; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(_random.Next(0, 1));
+            SpawnZombie(_random.Next(0, 4));
             yield return new WaitForSeconds(_random.Next(3, 5));
         }
         
@@ -158,7 +173,15 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(1);
+            SpawnZombie(_random.Next(1, 3));
+            if (i == 6)
+            {
+                for (int j = 0; j < 6; j++)
+                {
+                    yield return new WaitForSeconds(_random.Next(4, 10));
+                    SpawnZombie(4);
+                }
+            }
             yield return new WaitForSeconds(_random.Next(4, 6));
         }
 

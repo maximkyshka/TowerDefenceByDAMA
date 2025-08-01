@@ -15,14 +15,14 @@ public class ZombieHealth : MonoBehaviour
     
     private void Start()
     {
-        ReLoadSlider();
-        
         if (_canRegenerate)
             InvokeRepeating(nameof(Regenerate), _regenerationInterval, _regenerationInterval);
         
         _cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
         
         _slider.maxValue = _health;
+        
+        ReLoadSlider();
     }
     
     private void Regenerate()
