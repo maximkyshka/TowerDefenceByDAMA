@@ -8709,11 +8709,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3594375541221285883, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.36900002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3594375541221285883, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3927272213402430197, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_Name
@@ -8721,7 +8721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3927272213402430197, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4060881625102006920, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_Pivot.x
@@ -18339,7 +18339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7716087667215490781, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9189791317521875160, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
