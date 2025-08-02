@@ -15102,7 +15102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: waveLevel
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: _targetPoint
