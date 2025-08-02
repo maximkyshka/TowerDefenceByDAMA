@@ -57,6 +57,10 @@ public class ZombieSpavnerControler : MonoBehaviour
         _zombie.Add(temp);
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        //_particleSystem.Play();
+>>>>>>> Stashed changes
 =======
         //_particleSystem.Play();
 >>>>>>> Stashed changes
