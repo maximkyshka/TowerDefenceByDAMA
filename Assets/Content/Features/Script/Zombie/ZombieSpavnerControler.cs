@@ -17,6 +17,16 @@ public class ZombieSpavnerControler : MonoBehaviour
     
     [SerializeField, Range(1, 3)] private int waveLevel = 1;
     private int wavePercent = 0;
+<<<<<<< Updated upstream
+=======
+    
+        //private ParticleSystem _particleSystem;
+
+    private void Awake()
+    {
+        //_particleSystem = GetComponent<ParticleSystem>();
+    }
+>>>>>>> Stashed changes
 
     private void Start()
     {
@@ -45,6 +55,10 @@ public class ZombieSpavnerControler : MonoBehaviour
         GameObject temp = Instantiate(_zombiePrefab[id == -1 ? _random.Next(0, _zombiePrefab.Length) : id], transform.position, Quaternion.identity, transform);
         temp.GetComponent<ZombieAIControler>().Setup(_targetPoint, this);
         _zombie.Add(temp);
+<<<<<<< Updated upstream
+=======
+        //_particleSystem.Play();
+>>>>>>> Stashed changes
     }
 
     private void UpdateVictoryBar(int Add = 0)
