@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -7,9 +6,12 @@ public class ZombieHealth : MonoBehaviour
 {
     [SerializeField] private Slider _slider;
     [SerializeField, Range(0, 1000)] private int _health;
+    [SerializeField, Range(0, 300)] private int _coin;
     
     [SerializeField] private bool _canRegenerate;
     [SerializeField] private float _regenerationInterval;
+    private Wallet _wallet;
+    
 
     private Transform _cam;
     
@@ -23,6 +25,8 @@ public class ZombieHealth : MonoBehaviour
         _slider.maxValue = _health;
         
         ReLoadSlider();
+        
+        _wallet = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Wallet>();
     }
     
     private void Regenerate()
@@ -39,6 +43,7 @@ public class ZombieHealth : MonoBehaviour
         
         if (_health <= 0)
         {
+            _wallet.Add(_coin);
             Destroy(gameObject);
         }
     }

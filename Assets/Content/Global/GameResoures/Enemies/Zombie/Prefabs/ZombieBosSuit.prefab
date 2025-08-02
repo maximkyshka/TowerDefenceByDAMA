@@ -975,6 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 5227334433415023417}
   _health: 100
+  _coin: 300
   _canRegenerate: 0
   _regenerationInterval: 0
 --- !u!114 &2203247275979649279
