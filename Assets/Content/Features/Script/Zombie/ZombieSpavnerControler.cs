@@ -49,7 +49,7 @@ public class ZombieSpavnerControler : MonoBehaviour
 
     private void SpawnZombie(int id = -1)
     {
-        GameObject temp = Instantiate(_zombiePrefab[id == -1 ? _random.Next(0, _zombiePrefab.Length) : id], transform);
+        GameObject temp = Instantiate(_zombiePrefab[id == -1 ? _random.Next(0, _zombiePrefab.Length) : id], transform.position, Quaternion.identity, transform);
         temp.GetComponent<ZombieAIControler>().Setup(_targetPoints, this);
         _zombie.Add(temp);
     }
