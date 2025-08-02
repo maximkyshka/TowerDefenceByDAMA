@@ -7988,6 +7988,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
+--- !u!114 &212489000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7729628004320481393, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
+  m_PrefabInstance: {fileID: 212488999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &215171404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44407,9 +44418,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _money
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _moneyText
+      value: 
+      objectReference: {fileID: 212489000}
     - target: {fileID: 4902239105130194690, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _level
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6798665566368854141, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: m_Name
@@ -51251,6 +51270,14 @@ PrefabInstance:
       propertyPath: _way
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: waveLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _targetPoint
+      value: 
+      objectReference: {fileID: 1876079252}
     - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: _victoryBarControler
       value: 

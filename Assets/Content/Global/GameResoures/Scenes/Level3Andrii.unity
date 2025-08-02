@@ -33731,9 +33731,17 @@ PrefabInstance:
       value: 369
       objectReference: {fileID: 0}
     - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _money
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _moneyText
       value: 
       objectReference: {fileID: 2143214092}
+    - target: {fileID: 4902239105130194690, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: _level
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5571571062007901032, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _selectedTower
       value: 4
