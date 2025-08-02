@@ -164,7 +164,7 @@ MonoBehaviour:
   - {fileID: 1370505811353800, guid: 5abcbaa4c20adb04895a997e3d70772d, type: 3}
   - {fileID: 1591110490357510, guid: d4af3966dba2cd746ab019083640eb8c, type: 3}
   - {fileID: 1591110490357510, guid: d4af3966dba2cd746ab019083640eb8c, type: 3}
-  _towerToBuild: 5
+  _towerToBuild: 4
 --- !u!114 &5571571062007901032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8e3bd5ce65220439e6b8feff495cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _selectedTower: 5
+  _selectedTower: 4
 --- !u!114 &3869852265637688384
 MonoBehaviour:
   m_ObjectHideFlags: 0
