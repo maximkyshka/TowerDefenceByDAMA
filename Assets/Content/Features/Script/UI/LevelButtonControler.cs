@@ -8,7 +8,7 @@ public class LevelButtonControler : MonoBehaviour
     [SerializeField] private Button _level2Button;
     [SerializeField] private Button _level3Button;
 
-    [SerializeField] private int _level;
+    private int _level;
 
     private void Start()
     {
