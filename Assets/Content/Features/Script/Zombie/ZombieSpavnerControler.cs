@@ -7,7 +7,7 @@ public class ZombieSpavnerControler : MonoBehaviour
 {
     [SerializeField] private WaveBarControler _victoryBarControler;
     
-    private Transform _targetPoint;
+    [SerializeField] private Transform _targetPoint;
     
     [SerializeField] private GameObject[] _zombiePrefab;
 

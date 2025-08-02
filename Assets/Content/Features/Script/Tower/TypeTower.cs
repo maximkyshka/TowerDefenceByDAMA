@@ -6,7 +6,6 @@ namespace TypeTower
         TurretMissile01,
         TurretMissile02,
         TurretMortar,
-        MoneyBox,
         None
     }
 }

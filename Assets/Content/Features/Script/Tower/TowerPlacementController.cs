@@ -4,7 +4,7 @@ using TypeTower;
 
 public class TowerPlacementController : MonoBehaviour
 {
-    [SerializeField, Range(0.0f, 100.0f)] private float _placementRayDistance = 100f;
+    [SerializeField, Range(0.0f, 600.0f)] private float _placementRayDistance = 100f;
     
     [SerializeField] private LayerMask _placementLayerMask;
 
