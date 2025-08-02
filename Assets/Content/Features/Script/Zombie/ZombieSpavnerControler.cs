@@ -7,9 +7,7 @@ public class ZombieSpavnerControler : MonoBehaviour
 {
     [SerializeField] private WaveBarControler _victoryBarControler;
     
-    [SerializeField] private ZombieWay _way;
-    
-    private Transform[] _targetPoints;
+    private Transform _targetPoint;
     
     [SerializeField] private GameObject[] _zombiePrefab;
 
@@ -19,10 +17,12 @@ public class ZombieSpavnerControler : MonoBehaviour
     
     [SerializeField, Range(1, 3)] private int waveLevel = 1;
     private int wavePercent = 0;
+    
+    //private ParticleSystem _particleSystem;
 
     private void Awake()
     {
-        _targetPoints = _way.Points;
+        //_particleSystem = GetComponent<ParticleSystem>();
     }
 
     private void Start()
@@ -50,10 +50,11 @@ public class ZombieSpavnerControler : MonoBehaviour
     private void SpawnZombie(int id = -1)
     {
         GameObject temp = Instantiate(_zombiePrefab[id == -1 ? _random.Next(0, _zombiePrefab.Length) : id], transform.position, Quaternion.identity, transform);
-        temp.GetComponent<ZombieAIControler>().Setup(_targetPoints, this);
+        temp.GetComponent<ZombieAIControler>().Setup(_targetPoint, this);
         _zombie.Add(temp);
+        //_particleSystem.Play();
     }
-    
+
     private void UpdateVictoryBar(int Add = 0)
     {
         wavePercent += Add;
@@ -62,10 +63,6 @@ public class ZombieSpavnerControler : MonoBehaviour
         Debug.Log(wavePercent);
     }
 
-    public int GetPointCount()
-    {
-        return _targetPoints.Length;
-    }
 
     IEnumerator wave1()
     {
