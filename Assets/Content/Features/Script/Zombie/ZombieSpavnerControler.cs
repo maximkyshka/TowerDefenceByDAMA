@@ -19,10 +19,13 @@ public class ZombieSpavnerControler : MonoBehaviour
     
     [SerializeField, Range(1, 3)] private int waveLevel = 1;
     private int wavePercent = 0;
+    
+    private ParticleSystem _particleSystem;
 
     private void Awake()
     {
         _targetPoints = _way.Points;
+        _particleSystem = GetComponent<ParticleSystem>();
     }
 
     private void Start()
@@ -52,6 +55,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         GameObject temp = Instantiate(_zombiePrefab[id == -1 ? _random.Next(0, _zombiePrefab.Length) : id], transform.position, Quaternion.identity, transform);
         temp.GetComponent<ZombieAIControler>().Setup(_targetPoints, this);
         _zombie.Add(temp);
+        _particleSystem.Play();
     }
     
     private void UpdateVictoryBar(int Add = 0)
@@ -106,7 +110,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(2);
-            SpawnZombie(_random.Next(0, 1));
+            SpawnZombie(_random.Next(0, 2) == 2 ? 4 : _random.Next(0, 1));;
             yield return new WaitForSeconds(_random.Next(3, 5));
         }
         
@@ -124,7 +128,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(3);
-            SpawnZombie(_random.Next(0, 1) == 0 ? 1 : 3);
+            SpawnZombie(_random.Next(0, 1) == 0 ? 1 : 5);
             yield return new WaitForSeconds(_random.Next(4, 6));
         }
         
@@ -164,7 +168,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 50; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(_random.Next(0, 4));
+            SpawnZombie(_random.Next(4, 5));
             yield return new WaitForSeconds(_random.Next(3, 5));
         }
         

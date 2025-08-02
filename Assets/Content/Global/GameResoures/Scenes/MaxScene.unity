@@ -1966,6 +1966,34 @@ PrefabInstance:
       propertyPath: _victoryBarControler
       value: 
       objectReference: {fileID: 963194233}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 75194852619077847, guid: c7a557047ae88ca43aec8ce255f1a2a4, type: 3}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 5203014028200098518, guid: 9a899a84633144c4f8732c6bfc7159b2, type: 3}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 5268361738411861714, guid: afedef7656184304cb53fb6d1bdf7bf9, type: 3}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 5203014028200098518, guid: 8cb6a0aac3ea5ee4e90bf24df53ffaec, type: 3}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 5268361738411861714, guid: 661a4274130b9f74db1636a867d61af1, type: 3}
+    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
+      propertyPath: _zombiePrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 5203014028200098518, guid: 97b30b5326b510f43be16ebc284a70f0, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
