@@ -18,7 +18,3 @@ We use [Unity 2022.3.62f1](https://unity.com/releases/editor/whats-new/2022.3.62
 
 >[City](https://assetstore.unity.com/packages/3d/environments/simplepoly-city-low-poly-assets-58899) by [VenCreations](https://assetstore.unity.com/publishers/19573) from [AssetStore](https://assetstore.unity.com/)
 ![febc55a2-e03f-48f6-b96c-70af5d1633aa](https://github.com/user-attachments/assets/320acf0d-cf61-43a3-b0c3-32ec9ad1306d)
-
->[Localization](https://assetstore.unity.com/packages/tools/localization/lean-localization-28504#description) by [Carlos Wilkes](https://assetstore.unity.com/publishers/1513) from [AssetStore](https://assetstore.unity.com/)
-![f5c2d532-9295-4f37-a08c-481ccc2c0807](https://github.com/user-attachments/assets/34356091-7d75-4846-a9c5-560c35910733)
-
