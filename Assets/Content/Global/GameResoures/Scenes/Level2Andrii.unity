@@ -15645,7 +15645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2701492452379794539, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3666534828513822911, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18195,27 +18195,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2159212555021189930, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.00524
       objectReference: {fileID: 0}
     - target: {fileID: 2159212555021189930, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2159212555021189930, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.00524
       objectReference: {fileID: 0}
     - target: {fileID: 3594375541221285883, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.00524
       objectReference: {fileID: 0}
     - target: {fileID: 3594375541221285883, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3927272213402430197, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3927272213402430197, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4060881625102006920, guid: 66b3620b39b62a9498841d02d7cff4d8, type: 3}
       propertyPath: m_Pivot.x
@@ -30305,7 +30309,6 @@ MonoBehaviour:
   _level1Button: {fileID: 0}
   _level2Button: {fileID: 0}
   _level3Button: {fileID: 0}
-  _level: 0
 --- !u!4 &886578395
 Transform:
   m_ObjectHideFlags: 0
