@@ -41488,14 +41488,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1672150645669243079, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
-      propertyPath: _towerToBuild
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1672150645669243079, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
-      propertyPath: _placementRayDistance
-      value: 205
-      objectReference: {fileID: 0}
     - target: {fileID: 4902239105130194690, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _level
       value: 1
@@ -47940,27 +47932,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -123.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1966918696526672707, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: m_LocalRotation.w
@@ -47998,10 +47990,6 @@ PrefabInstance:
       propertyPath: _way
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
-      propertyPath: _targetPoint
-      value: 
-      objectReference: {fileID: 1876079252}
     - target: {fileID: 5211233435684706323, guid: be11d609c41dca04bbbdf5f77c0ea603, type: 3}
       propertyPath: _victoryBarControler
       value: 
