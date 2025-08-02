@@ -56,6 +56,10 @@ public class ZombieSpavnerControler : MonoBehaviour
         temp.GetComponent<ZombieAIControler>().Setup(_targetPoint, this);
         _zombie.Add(temp);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+        //_particleSystem.Play();
+>>>>>>> Stashed changes
 =======
         //_particleSystem.Play();
 >>>>>>> Stashed changes
