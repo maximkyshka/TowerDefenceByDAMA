@@ -35,7 +35,7 @@ public class ZombieHealth : MonoBehaviour
         ReLoadSlider();
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool giveMoney = true)
     {
         _health -= damage;
         
@@ -43,7 +43,11 @@ public class ZombieHealth : MonoBehaviour
         
         if (_health <= 0)
         {
-            _wallet.Add(_coin);
+            if(giveMoney)
+            {
+                _wallet.Add(_coin);
+            }
+
             Destroy(gameObject);
         }
     }

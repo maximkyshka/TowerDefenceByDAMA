@@ -22,7 +22,7 @@ public class MainTowerHelse : MonoBehaviour
         {
             _health -= 2;
             _slider.value = _health;
-            other.GetComponent<ZombieHealth>().TakeDamage(25);
+            other.GetComponent<ZombieHealth>().TakeDamage(25, false);
             
             if (_health <= 0)
             {

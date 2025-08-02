@@ -1,53 +1,73 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public float moveSpeed = 10f; 
-    public float rotationSpeed = 100f; 
-    private float yaw = 0f; 
-    private float pitch = 0f; 
+    [SerializeField, Range(0, 500f)] private float _moveSpeed;
+    [SerializeField] private XYZEnum.XYZI Axis = XYZEnum.XYZI.None;
+    [SerializeField, Range(-1000f, 1000f)] private float _min;
+    [SerializeField, Range(-1000f, 1000f)] private float _max;
 
-    void Start()
+    [SerializeField] private float _targetOffset = 0f;
+
+    private Vector3 _position;
+    private Vector3 _targetPosition;
+
+    private void Start()
     {
-       
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        _position = transform.position;
     }
 
     void Update()
     {
-       
-        float moveX = Input.GetAxis("Horizontal"); 
-        float moveZ = Input.GetAxis("Vertical");   
-        float moveY = 0f;
-
-        
-        if (Input.GetKey(KeyCode.Space))
-            moveY = 1f;
-        else if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            moveY = -1f;
-
-       
-        Vector3 movement = transform.right * moveX + transform.forward * moveZ + Vector3.up * moveY;
-        transform.position += movement * moveSpeed * Time.deltaTime;
-
-       
-        yaw += rotationSpeed * Input.GetAxis("Mouse X") * Time.deltaTime;
-        pitch -= rotationSpeed * Input.GetAxis("Mouse Y") * Time.deltaTime;
-
-        
-        pitch = Mathf.Clamp(pitch, -90f, 90f);
-
-        
-        transform.eulerAngles = new Vector3(pitch, yaw, 0f);
-
-        
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Axis != XYZEnum.XYZI.None)
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+            if (scrollInput != 0)
+            {
+                _targetOffset += scrollInput * _moveSpeed;
+            }
         }
+
+        _targetOffset = Mathf.Clamp(_targetOffset, _min, _max);
+
+        _targetPosition = _position;
+
+        switch (Axis)
+        {
+            case XYZEnum.XYZI.X:
+                _targetPosition.x = _position.x + _targetOffset;
+                break;
+            case XYZEnum.XYZI.Y:
+                _targetPosition.y = _position.y + _targetOffset;
+                break;
+            case XYZEnum.XYZI.Z:
+                _targetPosition.z = _position.z + _targetOffset;
+                break;
+            case XYZEnum.XYZI.InvX:
+                _targetPosition.x = _position.x - _targetOffset;
+                break;
+            case XYZEnum.XYZI.InvY:
+                _targetPosition.y = _position.y - _targetOffset;
+                break;
+            case XYZEnum.XYZI.InvZ:
+                _targetPosition.z = _position.z - _targetOffset;
+                break;
+        }
+
+        transform.position = Vector3.Lerp(transform.position, _targetPosition, Time.deltaTime * 10f);
+    }
+}
+
+public static class XYZEnum
+{
+    public enum XYZI
+    {
+        X,
+        Y,
+        Z,
+        InvX,
+        InvY,
+        InvZ,
+        None
     }
 }
