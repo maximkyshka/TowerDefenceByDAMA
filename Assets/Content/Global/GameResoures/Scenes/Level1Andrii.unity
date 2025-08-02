@@ -13532,7 +13532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _money
-      value: 1000
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _moneyText
@@ -18062,6 +18062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502831908832461186, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1780715912618936401, guid: b7d5c229fd8f7604ea2045ac6ff16c76, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
