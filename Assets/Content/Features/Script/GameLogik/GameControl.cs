@@ -13,6 +13,6 @@ public class GameControl : MonoBehaviour
     public void GameWin()
     {
         PlayerPrefs.SetInt("Level", _level + 1);
-        SceneManager.LoadScene(_level == 3 ? 0 : _level + 1);
+        SceneManager.LoadScene(_level + 1);
     }
 }

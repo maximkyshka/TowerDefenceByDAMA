@@ -1,20 +1,26 @@
-
- using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SceneController : MonoBehaviour
+public class LevelButtonControler : MonoBehaviour
 {
-    public void LoadSceneByName(string sceneName)
+    [SerializeField] private Button _level1Button;
+    [SerializeField] private Button _level2Button;
+    [SerializeField] private Button _level3Button;
+
+    [SerializeField] private int _level;
+
+    private void Start()
     {
-        if (!string.IsNullOrEmpty(sceneName) && SceneManager.GetSceneByName(sceneName).IsValid())
-        {
-            SceneManager.LoadScene(sceneName);
-        }
-        else
-        {
-            Debug.LogError("Scene " + sceneName + " does not exist or name is invalid!");
-        }
+        _level = PlayerPrefs.GetInt("Level", 1);
+
+        _level1Button.gameObject.SetActive(_level >= 1);
+        _level2Button.gameObject.SetActive(_level >= 2);
+        _level3Button.gameObject.SetActive(_level >= 3);
+
+        _level1Button.onClick.AddListener(() => LoadSceneByIndex(1));
+        _level2Button.onClick.AddListener(() => LoadSceneByIndex(2));
+        _level3Button.onClick.AddListener(() => LoadSceneByIndex(3));
     }
 
     public void LoadSceneByIndex(int sceneIndex)
@@ -29,4 +35,3 @@ public class SceneController : MonoBehaviour
         }
     }
 }
-
