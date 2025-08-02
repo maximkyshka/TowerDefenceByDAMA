@@ -53,6 +53,8 @@ MonoBehaviour:
   - {fileID: 5268361738411861714, guid: afedef7656184304cb53fb6d1bdf7bf9, type: 3}
   - {fileID: 5203014028200098518, guid: 8cb6a0aac3ea5ee4e90bf24df53ffaec, type: 3}
   - {fileID: 5268361738411861714, guid: 661a4274130b9f74db1636a867d61af1, type: 3}
+  - {fileID: 75194852619077847, guid: c7a557047ae88ca43aec8ce255f1a2a4, type: 3}
+  - {fileID: 8676430829233440138, guid: 3fc9903000d45ea4993a5b837c6d40fc, type: 3}
   - {fileID: 5203014028200098518, guid: 97b30b5326b510f43be16ebc284a70f0, type: 3}
   _zombie: []
   waveLevel: 1

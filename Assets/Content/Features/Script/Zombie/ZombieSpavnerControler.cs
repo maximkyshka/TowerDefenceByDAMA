@@ -27,24 +27,19 @@ public class ZombieSpavnerControler : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("2");
         UpdateVictoryBar();
         switch (waveLevel)
         {
             case 1:
                 StartCoroutine(wave1());
-                Debug.Log("20");
                 break;
             case 2:
                 StartCoroutine(wave2());
-                Debug.Log("200");
                 break;
             case 3:
                 StartCoroutine(wave3());
-                Debug.Log("2000");
                 break;
         }
-        Debug.Log("2");
     }
 
     private void SpawnZombie(int id = -1)
@@ -58,9 +53,7 @@ public class ZombieSpavnerControler : MonoBehaviour
     private void UpdateVictoryBar(int Add = 0)
     {
         wavePercent += Add;
-        Debug.Log(wavePercent);
         _victoryBarControler.ReLoadSlideBar(wavePercent);
-        Debug.Log(wavePercent);
     }
 
 
@@ -68,17 +61,24 @@ public class ZombieSpavnerControler : MonoBehaviour
     {
         for (int i = 0; i < 10; i++)
         {
-            UpdateVictoryBar(2);
+            UpdateVictoryBar(1);
             SpawnZombie(0);
             yield return new WaitForSeconds(_random.Next(4, 7));
         }
-        
+
+        for (int i = 0; i < 10; i++)
+        {
+            UpdateVictoryBar(1);
+            SpawnZombie(_random.Next(0, 2));
+            yield return new WaitForSeconds(_random.Next(4, 7));
+        }
+
         yield return new WaitForSeconds(_random.Next(15, 20));
         
         for (int i = 0; i < 10; i++)
         {
             UpdateVictoryBar(5);
-            SpawnZombie(_random.Next(0, 1));
+            SpawnZombie(_random.Next(1, 3));
             yield return new WaitForSeconds(_random.Next(7, 13));
         }
         
@@ -87,7 +87,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             UpdateVictoryBar(6);
-            SpawnZombie(_random.Next(0, 2));
+            SpawnZombie(_random.Next(0, 5));
             yield return new WaitForSeconds(_random.Next(10, 15));
         }
         
@@ -125,16 +125,16 @@ public class ZombieSpavnerControler : MonoBehaviour
             yield return new WaitForSeconds(_random.Next(4, 6));
         }
         
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 30; i++)
         {
-            UpdateVictoryBar(3);
-            SpawnZombie(_random.Next(0, 4));
+            UpdateVictoryBar(0);
+            SpawnZombie(_random.Next(0, 6));
             if (i == 6)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < 4; j++)
                 {
                     yield return new WaitForSeconds(_random.Next(4, 10));
-                    SpawnZombie(4);
+                    SpawnZombie(6);
                 }
             }
             yield return new WaitForSeconds(_random.Next(4, 6));
@@ -152,7 +152,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 20; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(_random.Next(0, 1) == 0 ? 0 : 2);
+            SpawnZombie(_random.Next(0, 4));
             yield return new WaitForSeconds(_random.Next(2, 4));
         }
         
@@ -161,7 +161,7 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 50; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(_random.Next(0, 4));
+            SpawnZombie(_random.Next(2, 5));
             yield return new WaitForSeconds(_random.Next(3, 5));
         }
         
@@ -170,13 +170,13 @@ public class ZombieSpavnerControler : MonoBehaviour
         for (int i = 0; i < 30; i++)
         {
             UpdateVictoryBar(1);
-            SpawnZombie(_random.Next(1, 3));
+            SpawnZombie(_random.Next(1, 5));
             if (i == 6)
             {
-                for (int j = 0; j < 6; j++)
+                for (int j = 0; j < 10; j++)
                 {
                     yield return new WaitForSeconds(_random.Next(4, 10));
-                    SpawnZombie(4);
+                    SpawnZombie(6);
                 }
             }
             yield return new WaitForSeconds(_random.Next(4, 6));
