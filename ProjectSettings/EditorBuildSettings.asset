@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Content/Global/GameResoures/Scenes/Level3Andrii.unity
     guid: 97bf38bb449f49243a5dd1d696776525
+  - enabled: 1
+    path: Assets/Content/Global/GameResoures/Scenes/Win.unity
+    guid: 856964572994f0d43ac8c8b7f38c58c0
   m_configObjects: {}
