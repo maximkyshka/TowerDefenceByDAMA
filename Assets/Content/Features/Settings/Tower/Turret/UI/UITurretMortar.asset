@@ -15,5 +15,4 @@ MonoBehaviour:
   _name: TurretMortar
   _image: {fileID: 21300000, guid: c1349cb458d4ba3458d63dc0988544dd, type: 3}
   _tower: 3
-  _price: 25
-  _reloadTime: 0
+  _price: 35

@@ -15,5 +15,4 @@ MonoBehaviour:
   _name: TurretMissile02
   _image: {fileID: 21300000, guid: a033c4d45eb53a840b2e58df231c3510, type: 3}
   _tower: 2
-  _price: 30
-  _reloadTime: 0
+  _price: 40

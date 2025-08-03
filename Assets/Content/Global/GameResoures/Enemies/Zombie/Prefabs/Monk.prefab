@@ -1295,7 +1295,7 @@ Animator:
   m_GameObject: {fileID: 8676430829233440138}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68aa757ec6aac2c45966b141a2ce899f, type: 2}
+  m_Controller: {fileID: 9100000, guid: ff8d345e6e232734fa1528604d9d879c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1320,7 +1320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 8590473745879318595}
   _health: 250
-  _coin: 100
+  _coin: 45
   _canRegenerate: 1
   _regenerationInterval: 7
 --- !u!114 &831735823829946590
