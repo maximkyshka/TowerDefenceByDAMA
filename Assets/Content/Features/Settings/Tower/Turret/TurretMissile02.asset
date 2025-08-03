@@ -16,7 +16,7 @@ MonoBehaviour:
   _reloadDuration: 10
   _projectilePrefab: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
   Sound: {fileID: 8300000, guid: e8d1dbff67d315e4395b0f412880a068, type: 3}
-  _maxDistance: 80
+  _maxDistance: 60
   _minDistance: 15
   _rotationSpeed: 20
   _useYaw: 1
