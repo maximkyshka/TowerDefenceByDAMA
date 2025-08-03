@@ -44920,6 +44920,14 @@ PrefabInstance:
       propertyPath: _zombieSpavner
       value: 
       objectReference: {fileID: 1774247568}
+    - target: {fileID: 1101175698523434412, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b99e4ca54feb1c499bd45b2c95dfde1, type: 3}
+    - target: {fileID: 1101175698523434412, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4841946703227820832, guid: c0a3fdf1150488b47843e8003e6fada3, type: 2}
     - target: {fileID: 1134593778169401222, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: m_LocalPosition.x
       value: 68.8
