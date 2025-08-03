@@ -34134,7 +34134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _money
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3869852265637688384, guid: 4c304a3fa1e111647a3e8cda5d490488, type: 3}
       propertyPath: _moneyText
