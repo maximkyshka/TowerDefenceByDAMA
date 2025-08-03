@@ -15,5 +15,4 @@ MonoBehaviour:
   _name: TurretCannon
   _image: {fileID: 21300000, guid: db02d0eed87618b48b426430e8acdf7f, type: 3}
   _tower: 0
-  _price: 15
-  _reloadTime: 0
+  _price: 30
