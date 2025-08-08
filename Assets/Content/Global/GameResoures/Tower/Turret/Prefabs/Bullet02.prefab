@@ -132,8 +132,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _lifeTime: 11
-  _damage: 25
-  _speed: 67
+  _damage: 30
+  _speed: 100
   _rotationSpeed: 55
 --- !u!54 &-610818080768391304
 Rigidbody:
