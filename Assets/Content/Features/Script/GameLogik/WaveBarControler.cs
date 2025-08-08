@@ -5,7 +5,7 @@ public class WaveBarControler : MonoBehaviour
 {
     [SerializeField] private GameObject _zombieSpavner;
     [SerializeField] private Slider _slider;
-    private int _point = 0;
+    private float _point = 0;
 
     private void Start()
     {
@@ -18,7 +18,7 @@ public class WaveBarControler : MonoBehaviour
         _slider.value = _point;
     }
 
-    public void ReLoadSlideBar(int Point)
+    public void ReLoadSlideBar(float Point)
     {
         _point = Point;
         sliderRefresh();

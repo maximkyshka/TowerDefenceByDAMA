@@ -14,13 +14,13 @@ public class LevelButtonControler : MonoBehaviour
     {
         _level = PlayerPrefs.GetInt("Level", 1);
 
-        _level1Button.gameObject.SetActive(_level >= 1);
-        _level2Button.gameObject.SetActive(_level >= 2);
-        _level3Button.gameObject.SetActive(_level >= 3);
+        if(_level1Button != null) _level1Button.gameObject.SetActive(_level >= 1);
+        if(_level2Button != null) _level2Button.gameObject.SetActive(_level >= 2);
+        if(_level3Button != null) _level3Button.gameObject.SetActive(_level >= 3);
 
-        _level1Button.onClick.AddListener(() => LoadSceneByIndex(1));
-        _level2Button.onClick.AddListener(() => LoadSceneByIndex(2));
-        _level3Button.onClick.AddListener(() => LoadSceneByIndex(3));
+        if(_level1Button != null) _level1Button.onClick.AddListener(() => LoadSceneByIndex(1));
+        if(_level2Button != null) _level2Button.onClick.AddListener(() => LoadSceneByIndex(2));
+        if(_level3Button != null) _level3Button.onClick.AddListener(() => LoadSceneByIndex(3));
     }
 
     public void LoadSceneByIndex(int sceneIndex)

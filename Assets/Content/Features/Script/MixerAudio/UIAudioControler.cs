@@ -97,6 +97,13 @@ public class UIAudioControler : MonoBehaviour
         if (File.Exists(_savePath))
         {
             string json = File.ReadAllText(_savePath);
+
+            if (string.IsNullOrWhiteSpace(json))
+            {
+                CreateDefaultVolumeData();
+                return;
+            }
+            
             _volume = JsonUtility.FromJson<VolumeData>(json);
             
             if (_volume == null)
