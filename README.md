@@ -27,6 +27,6 @@
 
 
 
-# _Gibson made with Unity and Unity Store by team DAMA_
+# _Gibson made with Unity by team DAMA_
 
 <img width="1536" height="1024" alt="DAMA Logo" src="https://github.com/user-attachments/assets/2816fa83-a6ec-4a8f-bc5f-4edd747272e4" />
